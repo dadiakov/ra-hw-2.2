@@ -24,6 +24,6 @@ export default function Store({ products }) {
     );
   }
 
-  Store.propTypes = {
-    products: PropTypes.array.isRequired,
-  }
+Store.propTypes = {
+  products: PropTypes.array.isRequired,
+}

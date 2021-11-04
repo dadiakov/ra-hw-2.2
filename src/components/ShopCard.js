@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
 
 export default function ShopCard({e}) {
     return (
-      <div className="cardview-card-item" id={e.name} key={uuidv4()}>
+      <div className="cardview-card-item" id={e.name}>
             <div className="cardview-header">
               <div className="cardview-item-name">{e.name}</div>
               <div className="cardview-item-color">{e.color}</div>
@@ -21,6 +20,6 @@ export default function ShopCard({e}) {
     )
   }
 
-  ShopCard.propTypes = {
-    e: PropTypes.object.isRequired,
-  }
+ShopCard.propTypes = {
+  e: PropTypes.object.isRequired,
+}
