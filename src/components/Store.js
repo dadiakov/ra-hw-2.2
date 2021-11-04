@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import IconSwitch from './IconSwitch';
-import ListView from './ListView/ListView';
-import CardView from './CardView/CardView';
+import ListView from './ListView';
+import CardView from './CardView';
+import PropTypes from 'prop-types';
 
 export default function Store({ products }) {
     const [icon, setIcon] = useState('view_list');
@@ -11,7 +12,7 @@ export default function Store({ products }) {
       );
     return (
       <>
-        <div class='switch-icon-container'>
+        <div className='switch-icon-container'>
         <IconSwitch icon={icon} onSwitch={switchLoad} />
         </div>
         {icon === 'view_module' ? (
@@ -21,4 +22,8 @@ export default function Store({ products }) {
         )}
       </>
     );
+  }
+
+  Store.propTypes = {
+    products: PropTypes.array.isRequired,
   }
