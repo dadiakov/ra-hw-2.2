@@ -7,12 +7,12 @@ export default function IconSwitch({ icon, onSwitch }) {
     );
   }
 
-  IconSwitch.propTypes = {
-    icon: PropTypes.string,
-    onSwitch: PropTypes.func,
-  }
+IconSwitch.propTypes = {
+  icon: PropTypes.string,
+  onSwitch: PropTypes.func,
+}
 
-  IconSwitch.defaultProps = {
-    icon: 'view_list',
-    onSwitch: () => console.log('Функция кнопки переключения вида не задана'),
-  }
+IconSwitch.defaultProps = {
+  icon: 'view_list',
+  onSwitch: () => console.log('Функция кнопки переключения вида не задана'),
+}
